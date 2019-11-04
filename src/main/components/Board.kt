@@ -1,10 +1,10 @@
-package main
+package main.components
 
 data class Board(
-    val id: Int,
-    val player: Int,
-    val width: Int = 10,
-    val height: Int = 10
+        val id: Int,
+        val player: Int,
+        val width: Int = 10,
+        val height: Int = 10
 ) {
     val ship_size_list: List<Int> = determineShipsToCreate()
     val token_point: Point = Point(0, 0)
@@ -44,10 +44,10 @@ data class Board(
         var ship_id = 1
         for (ship_size in ship_size_list) {
             var iter_ship =
-                Ship(ship_id, ship_size,1, token_point.randomPoint(width, height), token_direction.randomDirection())
+                    Ship(ship_id, ship_size, 1, token_point.randomPoint(width, height), token_direction.randomDirection())
             while (!canShipBePlaced(iter_ship, ship_list)) {
                 iter_ship =
-                    Ship(ship_id, ship_size,1, token_point.randomPoint(width, height), token_direction.randomDirection())
+                        Ship(ship_id, ship_size, 1, token_point.randomPoint(width, height), token_direction.randomDirection())
             }
             ship_list.add(iter_ship)
             ship_id = ship_id + 1
@@ -70,9 +70,9 @@ data class Board(
 
     fun isShipInBoard(ship_to_place: Ship): Boolean {
         if (ship_to_place.start.row >= height
-            || ship_to_place.end.row >= height
-            || ship_to_place.start.col >= width
-            || ship_to_place.end.col >= width
+                || ship_to_place.end.row >= height
+                || ship_to_place.start.col >= width
+                || ship_to_place.end.col >= width
         ) {
             return false
         }
@@ -123,13 +123,13 @@ data class Board(
     fun determineShipsToCreate(): List<Int> {
         var ship_size_list_loop = listOf<Int>()
         if (width > 0 && width <= 4 && height > 0 && height <= 4) {
-            ship_size_list_loop = listOf(3,2)
+            ship_size_list_loop = listOf(3, 2)
         } else if (width > 4 && width <= 6 && height > 4 && height <= 6) {
-            ship_size_list_loop = listOf(3,3,2)
+            ship_size_list_loop = listOf(3, 3, 2)
         } else if (width > 6 && width <= 8 && height > 6 && height <= 8) {
-            ship_size_list_loop = listOf(4,3,3,2)
+            ship_size_list_loop = listOf(4, 3, 3, 2)
         } else if (width > 8 && width <= 10 && height > 8 && height <= 10) {
-            ship_size_list_loop = listOf(5,4,3,3,2)
+            ship_size_list_loop = listOf(5, 4, 3, 3, 2)
         }
         return ship_size_list_loop
     }

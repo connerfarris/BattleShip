@@ -1,4 +1,4 @@
-package main
+package main.components
 
 enum class Direction {
     HORIZONTAL, VERTICAL;

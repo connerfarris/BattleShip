@@ -1,8 +1,8 @@
-package main
+package main.components
 
 data class Point(
-    val row: Int,
-    val col: Int
+        val row: Int,
+        val col: Int
 ) {
     fun isValid() = col >= 0 && row >= 0
 

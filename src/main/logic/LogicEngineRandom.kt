@@ -1,4 +1,7 @@
-package main
+package main.logic
+
+import main.components.Board
+import main.components.Point
 
 class LogicEngineRandom (
     var board: Board

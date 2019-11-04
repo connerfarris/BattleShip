@@ -1,6 +1,6 @@
-package main
+package main.components
 
 data class WeightedDirection(
-    val len: Int,
-    val dir: Direction
+        val len: Int,
+        val dir: Direction
 )

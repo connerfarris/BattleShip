@@ -1,11 +1,11 @@
-package main
+package main.components
 
 data class Ship(
-    val id: Int,
-    val size: Int,
-    val player: Int,
-    val start: Point,
-    val direction: Direction
+        val id: Int,
+        val size: Int,
+        val player: Int,
+        val start: Point,
+        val direction: Direction
 ) {
     val end: Point = start + direction * (size - 1)
     val ship_points: Set<Point> = getShipPoints(start, end)

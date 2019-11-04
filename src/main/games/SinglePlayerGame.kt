@@ -1,8 +1,11 @@
-package main
+package main.games
 
-data class SinglePlayerGame (
-    val width: Int,
-    val height: Int
+import main.components.Board
+import main.logic.LogicEngineRandom
+
+data class SinglePlayerGame(
+        val width: Int,
+        val height: Int
 ) {
     var moveNum: Int = 0
     private var board = Board(1, 1, width, height)

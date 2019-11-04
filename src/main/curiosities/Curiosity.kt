@@ -1,18 +1,17 @@
-package main
+package main.curiosities
+
+import main.components.Board
+import main.components.Point
 
 fun main() {
     val how_far: Int = 1000000
     var ship_space_set = mutableSetOf<Set<Point>>()
     for (x in 0..how_far) {
-        var board = Board(1, 1,7,7)
+        var board = Board(1, 1, 7, 7)
         ship_space_set.add(board.ship_space.keys)
         println(x)
     }
     println("\nhow many orientations of 3 ships in 5x5? \n" + ship_space_set.size.toString())
-
-
-
-
 
 
     //    for (x in 4..10) {
