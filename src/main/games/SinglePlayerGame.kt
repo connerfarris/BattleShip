@@ -19,4 +19,11 @@ data class SinglePlayerGame(
         }
         board.printBoard()
     }
+
+    fun playNoPrint() {
+        while (!board.game_over) {
+            logicEngine.move()
+            moveNum++
+        }
+    }
 }

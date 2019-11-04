@@ -4,7 +4,7 @@ import main.components.Board
 import main.components.Point
 
 class LogicEngineRandom (
-    var board: Board
+        var board: Board
 ) {
     fun move() {
         val movePoint = pickRandomPoint()
