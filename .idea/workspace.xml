@@ -2,21 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46b610b5-8e87-4d58-98a2-510a7d586782" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/curiosities/AverageMoves.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/games/SinglePlayerGamePickCloseSmartly.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/logic/LocigEnginePickCloseSmartly.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/SinglePlayerGameMain.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/SinglePlayerGameMain.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/curiosities/Curiosity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/curiosities/ShipPlacementPermutations.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/curiosities/AverageMoves.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/curiosities/AverageMoves.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/games/SinglePlayerGamePickClose.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/games/SinglePlayerGamePickClose.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/games/SinglePlayerGameRandom.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/games/SinglePlayerGameRandom.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/logic/LogicEngine.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/logic/LogicEngine.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/logic/LogicEngineRandom.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/logic/LogicEnginePickRandom.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/META-INF/battleship.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/target/META-INF/battleship.kotlin_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/main/SinglePlayerGameMainKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/main/SinglePlayerGameMainKt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/main/curiosities/CuriosityKt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/main/games/SinglePlayerGameRandom.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/main/logic/LogicEngineRandom.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/logic/LocigEnginePickCloseSmartly.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/logic/PickCloseSmartly.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/logic/LogicEnginePickClose.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/logic/PickClose.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/logic/LogicEnginePickRandom.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/logic/PickRandom.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/main/curiosities/AverageMovesKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/main/curiosities/AverageMovesKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/main/games/SinglePlayerGamePickClose.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/main/games/SinglePlayerGamePickClose.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/main/games/SinglePlayerGamePickRandom.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/main/games/SinglePlayerGamePickRandom.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/main/logic/LogicEnginePickClose.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/main/logic/LogicEnginePickCloseSmartly.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/main/logic/LogicEnginePickCloseSmartly.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/main/logic/LogicEnginePickRandom.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,10 +29,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/logic/LogicEnginePickRandom.kt">
+        <entry file="file://$PROJECT_DIR$/src/main/logic/PickRandom.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+            <state relative-caret-position="408">
+              <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
               <folding>
                 <element signature="e#20#77#0" expanded="true" />
               </folding>
@@ -45,8 +43,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/games/SinglePlayerGameRandom.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+            <state relative-caret-position="323">
+              <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
               <folding>
                 <element signature="e#20#84#0" expanded="true" />
               </folding>
@@ -54,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/games/SinglePlayerGamePickClose.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="30" lean-forward="true" selection-end-line="29" />
+            <state relative-caret-position="289">
+              <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
               <folding>
                 <element signature="e#20#87#0" expanded="true" />
               </folding>
@@ -70,7 +68,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/games/SinglePlayerGamePickCloseSmartly.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
-              <caret line="16" column="26" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+              <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
               <folding>
                 <element signature="e#20#133#0" expanded="true" />
               </folding>
@@ -79,10 +77,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/logic/LogicEnginePickClose.kt">
+        <entry file="file://$PROJECT_DIR$/src/main/logic/PickClose.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="17" lean-forward="true" selection-end-line="62" selection-end-column="1" />
+            <state relative-caret-position="323">
+              <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
               <folding>
                 <element signature="e#20#77#0" expanded="true" />
               </folding>
@@ -91,10 +89,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/logic/LocigEnginePickCloseSmartly.kt">
+        <entry file="file://$PROJECT_DIR$/src/main/logic/PickCloseSmartly.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="25" lean-forward="true" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+            <state relative-caret-position="255">
+              <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
               <folding>
                 <element signature="e#20#103#0" expanded="true" />
               </folding>
@@ -106,7 +104,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/SinglePlayerGameMain.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="391">
-              <caret line="23" column="12" lean-forward="true" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+              <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
               <folding>
                 <element signature="e#14#98#0" expanded="true" />
               </folding>
@@ -126,11 +124,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/curiosities/AverageMoves.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+            <state relative-caret-position="561">
+              <caret line="33" column="38" lean-forward="true" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
               <folding>
                 <element signature="e#26#110#0" expanded="true" />
               </folding>
@@ -139,10 +137,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/components/Board.kt">
+        <entry file="file://$PROJECT_DIR$/src/main/logic/LogicEngine.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+            <state relative-caret-position="119">
+              <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -175,16 +173,16 @@
         <option value="$PROJECT_DIR$/src/main/logic/LogicEnginePickClose.kt" />
         <option value="$PROJECT_DIR$/src/main/games/SinglePlayerGame.kt" />
         <option value="$PROJECT_DIR$/src/main/components/Board.kt" />
-        <option value="$PROJECT_DIR$/src/main/games/SinglePlayerGamePickClose.kt" />
         <option value="$PROJECT_DIR$/src/main/logic/LogicEngineRandom.kt" />
         <option value="$PROJECT_DIR$/src/main/logic/LogicEngine.kt" />
         <option value="$PROJECT_DIR$/src/main/curiosities/Curiosity.kt" />
         <option value="$PROJECT_DIR$/src/main/logic/LogicEnginePickRandom.kt" />
         <option value="$PROJECT_DIR$/src/main/games/SinglePlayerGameRandom.kt" />
-        <option value="$PROJECT_DIR$/src/main/curiosities/AverageMoves.kt" />
         <option value="$PROJECT_DIR$/src/main/games/SinglePlayerGamePickCloseSmartly.kt" />
         <option value="$PROJECT_DIR$/src/main/SinglePlayerGameMain.kt" />
         <option value="$PROJECT_DIR$/src/main/logic/LocigEnginePickCloseSmartly.kt" />
+        <option value="$PROJECT_DIR$/src/main/games/SinglePlayerGamePickClose.kt" />
+        <option value="$PROJECT_DIR$/src/main/curiosities/AverageMoves.kt" />
       </list>
     </option>
   </component>
@@ -349,16 +347,15 @@
       <option name="presentableId" value="Default" />
       <updated>1572900815657</updated>
       <workItem from="1572900819078" duration="440000" />
-      <workItem from="1572901502826" duration="17354000" />
+      <workItem from="1572901502826" duration="18219000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17794000" />
+    <option name="totallyTimeSpent" value="18659000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17377399" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -375,7 +372,7 @@
       <window_info anchor="bottom" id="Version Control" order="5" />
       <window_info anchor="bottom" id="Messages" order="6" weight="0.3286334" />
       <window_info anchor="bottom" id="Message" order="7" />
-      <window_info anchor="bottom" id="Find" order="8" />
+      <window_info anchor="bottom" id="Find" order="8" weight="0.32936078" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.39869988" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
@@ -453,53 +450,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/logic/LogicEngine.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/logic/LogicEnginePickRandom.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
-          <folding>
-            <element signature="e#20#77#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/logic/LogicEnginePickClose.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="17" lean-forward="true" selection-end-line="62" selection-end-column="1" />
-          <folding>
-            <element signature="e#20#77#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/games/SinglePlayerGameRandom.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
-          <folding>
-            <element signature="e#20#84#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/games/SinglePlayerGamePickClose.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="30" lean-forward="true" selection-end-line="29" />
-          <folding>
-            <element signature="e#20#87#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/curiosities/ShipPlacementPermutations.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -510,30 +460,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/SinglePlayerGameMain.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="12" lean-forward="true" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
-          <folding>
-            <element signature="e#14#98#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/games/SinglePlayerGamePickCloseSmartly.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="16" column="26" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
           <folding>
             <element signature="e#20#133#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/logic/LocigEnginePickCloseSmartly.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/logic/LogicEngine.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="25" lean-forward="true" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+        <state relative-caret-position="119">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/logic/PickRandom.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+          <folding>
+            <element signature="e#20#77#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/logic/PickClose.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+          <folding>
+            <element signature="e#20#77#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/games/SinglePlayerGameRandom.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+          <folding>
+            <element signature="e#20#84#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/logic/PickCloseSmartly.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
           <folding>
             <element signature="e#20#103#0" expanded="true" />
           </folding>
@@ -542,10 +519,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/curiosities/AverageMoves.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+        <state relative-caret-position="561">
+          <caret line="33" column="38" lean-forward="true" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
           <folding>
             <element signature="e#26#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/SinglePlayerGameMain.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+          <folding>
+            <element signature="e#14#98#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/games/SinglePlayerGamePickClose.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+          <folding>
+            <element signature="e#20#87#0" expanded="true" />
           </folding>
         </state>
       </provider>

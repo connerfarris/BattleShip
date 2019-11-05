@@ -1,15 +1,15 @@
 package main.games
 
 import main.components.Board
-import main.logic.LogicEnginePickClose
+import main.logic.PickRandom
 
-data class SinglePlayerGamePickClose(
+data class SinglePlayerGamePickRandom(
         val width: Int,
         val height: Int
 ) {
     var moveNum: Int = 0
     private var board = Board(1, 1, width, height)
-    private var logicEngine = LogicEnginePickClose(board)
+    private var logicEngine = PickRandom(board)
 
     fun play() {
         while (!board.game_over) {

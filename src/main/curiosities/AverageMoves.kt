@@ -6,9 +6,10 @@ import main.games.SinglePlayerGamePickRandom
 
 fun main() {
     val iterations = 100000
-    var moves = 0
     val width = 10
     val height = 10
+
+//    var moves = 0
 //    for (x in 0..iterations) {
 //        val game = SinglePlayerGamePickRandom(width, height)
 //        game.playNoPrint()
