@@ -11,6 +11,12 @@ class PickRandom(
         return processMove(movePoint)
     }
 
+    override fun moveVerbose() {
+        val movePoint = pickRandomPoint()
+        println("random: " + movePoint)
+        return processMove(movePoint)
+    }
+
     private fun pickRandomPoint(): Point {
         var tokenPoint = Point(0, 0)
         while (tokenPoint in board.hits_space || tokenPoint in board.misses) {
@@ -19,7 +25,7 @@ class PickRandom(
         return tokenPoint
     }
 
-    fun processMove(movePoint: Point) {
+    override fun processMove(movePoint: Point) {
         if (movePoint in board.ship_space) {
             for (ship in board.ships) {
                 if (movePoint in ship) {

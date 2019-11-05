@@ -1,10 +1,7 @@
 package main.games
 
 import main.components.Board
-import main.logic.LogicEngine
-import main.logic.PickCloseSmartly
-import main.logic.PickClose
-import main.logic.PickRandom
+import main.logic.*
 
 data class SinglePlayerGame(
         val width: Int,
@@ -19,6 +16,15 @@ data class SinglePlayerGame(
         while (!board.game_over) {
             board.printBoard()
             logicEngine.move()
+            moveNum++
+        }
+        board.printBoard()
+    }
+
+    fun playVerbose() {
+        while (!board.game_over) {
+            board.printBoard()
+            logicEngine.moveVerbose()
             moveNum++
         }
         board.printBoard()
@@ -42,7 +48,7 @@ data class SinglePlayerGame(
             logicEngine = PickCloseSmartly(board)
         }
         if ("pickCloseStopWhenSunk".equals(logicEngineString)) {
-            logicEngine = PickCloseSmartly(board)
+            logicEngine = PickCloseStopWhenSunk(board)
         }
         return logicEngine
     }

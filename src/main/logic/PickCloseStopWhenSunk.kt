@@ -7,15 +7,47 @@ import java.lang.Math.abs
 class PickCloseStopWhenSunk(
         board: Board
 ) : LogicEngine(board) {
+
+    var sunkShipCount: Int = 0
+
     override fun move() {
-        var movePoint: Point = getPossibleShipPoint()
-        if (movePoint == Point(-1, -1)) {
+        var movePoint: Point
+        if (board.hits_space.size == getSizeOfSunkShips(board.sunk_ships)) {
             movePoint = pickRandomPoint()
+            sunkShipCount++
+        } else {
+            movePoint = getPossibleShipPoint()
+            if (movePoint == Point(-1, -1)) {
+                movePoint = pickRandomPoint()
+            }
         }
         return processMove(movePoint)
     }
 
-    private fun processMove(movePoint: Point) {
+    override fun moveVerbose() {
+        println("sunkShipCount: " + sunkShipCount)
+        println("board.sunk_ships.size: " + board.sunk_ships.size)
+        println("board.sunk_ships: " + board.sunk_ships)
+        println("board.hits_space.size: " + board.hits_space.size)
+        println("getSizeOfSunkShips(board.sunk_ships): " + getSizeOfSunkShips(board.sunk_ships))
+        var movePoint: Point
+        if (/*board.sunk_ships.size != sunkShipCount &&*/ board.hits_space.size == getSizeOfSunkShips(board.sunk_ships)) {
+            movePoint = pickRandomPoint()
+            sunkShipCount++
+            println("random: " + movePoint)
+        } else {
+            movePoint = getPossibleShipPoint()
+            if (movePoint == Point(-1, -1)) {
+                movePoint = pickRandomPoint()
+                println("random: " + movePoint)
+            } else {
+                println("pick: " + movePoint)
+            }
+        }
+        return processMove(movePoint)
+    }
+
+    override fun processMove(movePoint: Point) {
         if (movePoint in board.ship_space) {
             for (ship in board.ships) {
                 if (movePoint in ship) {
@@ -60,5 +92,23 @@ class PickCloseStopWhenSunk(
         return Point(-1, -1)
     }
 
+    private fun getSizeOfSunkShips(sunkShips: List<Int>): Int {
+        var size = 0
+        for (ship in sunkShips) {
+            if (ship == 1) {
+                size += 5
+            }
+            if (ship == 2) {
+                size += 4
+            }
+            if (ship == 3 || ship == 4) {
+                size += 3
+            }
+            if (ship == 5) {
+                size += 2
+            }
+        }
+        return size
+    }
 
 }

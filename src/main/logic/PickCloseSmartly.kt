@@ -15,7 +15,18 @@ class PickCloseSmartly(
         return processMove(movePoint)
     }
 
-    private fun processMove(movePoint: Point) {
+    override fun moveVerbose() {
+        var movePoint: Point = getPossibleShipPoint()
+        if (movePoint == Point(-1, -1)) {
+            movePoint = pickRandomPoint()
+            println("random: " + movePoint)
+        } else {
+            println("pick: " + movePoint)
+        }
+        return processMove(movePoint)
+    }
+
+    override fun processMove(movePoint: Point) {
         if (movePoint in board.ship_space) {
             for (ship in board.ships) {
                 if (movePoint in ship) {
