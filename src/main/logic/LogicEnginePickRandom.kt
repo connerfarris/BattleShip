@@ -3,7 +3,7 @@ package main.logic
 import main.components.Board
 import main.components.Point
 
-class LogicEngineRandom(
+class LogicEnginePickRandom(
         board: Board
 ) : LogicEngine(board) {
     override fun move() {

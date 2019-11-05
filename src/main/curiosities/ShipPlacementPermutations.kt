@@ -4,10 +4,10 @@ import main.components.Board
 import main.components.Point
 
 fun main() {
-    val how_far: Int = 1000000
+    val how_far: Int = 100000
     var ship_space_set = mutableSetOf<Set<Point>>()
     for (x in 0..how_far) {
-        var board = Board(1, 1, 7, 7)
+        var board = Board(1, 1, 5, 5)
         ship_space_set.add(board.ship_space.keys)
         println(x)
     }
