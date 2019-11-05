@@ -4,7 +4,7 @@ import main.components.Board
 import main.components.Point
 import java.lang.Math.abs
 
-class PickCloseSmartly(
+class PickCloseStopWhenSunk(
         board: Board
 ) : LogicEngine(board) {
     override fun move() {
