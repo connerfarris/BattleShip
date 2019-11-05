@@ -27,11 +27,11 @@ data class Board(
                 if (hits_space.contains(Point(i, j))) {
                     print(" X")
                 } else if (misses.contains(Point(i, j))) {
-                    print(" .")
+                    print(" o")
                 } else if (ship_space.contains(Point(i, j))) {
                     print(" -")
                 } else {
-                    print(" w")
+                    print(" .")
                 }
             }
             println()

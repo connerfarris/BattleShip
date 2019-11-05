@@ -3,10 +3,10 @@ package main.logic
 import main.components.Board
 import main.components.Point
 
-class LogicEngineRandom (
-        var board: Board
-) {
-    fun move() {
+class LogicEngineRandom(
+        board: Board
+) : LogicEngine(board) {
+    override fun move() {
         val movePoint = pickRandomPoint()
         return processMove(movePoint)
     }
