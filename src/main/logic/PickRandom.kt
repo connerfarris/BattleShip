@@ -19,14 +19,14 @@ class PickRandom(
 
     private fun pickRandomPoint(): Point {
         var tokenPoint = Point(0, 0)
-        while (tokenPoint in board.hits_space || tokenPoint in board.misses) {
+        while (tokenPoint in board.hitsSpace || tokenPoint in board.misses) {
             tokenPoint = tokenPoint.randomPoint(board.width, board.height)
         }
         return tokenPoint
     }
 
     override fun processMove(movePoint: Point) {
-        if (movePoint in board.ship_space) {
+        if (movePoint in board.shipSpace) {
             for (ship in board.ships) {
                 if (movePoint in ship) {
                     ship.hits.add(movePoint)

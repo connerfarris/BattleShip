@@ -27,7 +27,7 @@ class PickCloseSmartly(
     }
 
     override fun processMove(movePoint: Point) {
-        if (movePoint in board.ship_space) {
+        if (movePoint in board.shipSpace) {
             for (ship in board.ships) {
                 if (movePoint in ship) {
                     ship.hits.add(movePoint)
@@ -43,28 +43,28 @@ class PickCloseSmartly(
 
     private fun pickRandomPoint(): Point {
         var tokenPoint = Point(0, 0)
-        while ((abs(tokenPoint.row - tokenPoint.col) % 2 == 1) || tokenPoint in board.hits_space || tokenPoint in board.misses) {
+        while ((abs(tokenPoint.row - tokenPoint.col) % 2 == 1) || tokenPoint in board.hitsSpace || tokenPoint in board.misses) {
             tokenPoint = tokenPoint.randomPoint(board.width, board.height)
         }
         return tokenPoint
     }
 
     private fun getPossibleShipPoint(): Point {
-        for (hit in board.hits_space) {
+        for (hit in board.hitsSpace) {
             val tempPointUp = Point(hit.row - 1, hit.col)
             val tempPointDown = Point(hit.row + 1, hit.col)
             val tempPointLeft = Point(hit.row, hit.col - 1)
             val tempPointRight = Point(hit.row, hit.col + 1)
-            if (tempPointUp in board && tempPointUp !in board.hits_space && tempPointUp !in board.misses) {
+            if (tempPointUp in board && tempPointUp !in board.hitsSpace && tempPointUp !in board.misses) {
                 return tempPointUp
             }
-            if (tempPointDown in board && tempPointDown !in board.hits_space && tempPointDown !in board.misses) {
+            if (tempPointDown in board && tempPointDown !in board.hitsSpace && tempPointDown !in board.misses) {
                 return tempPointDown
             }
-            if (tempPointLeft in board && tempPointLeft !in board.hits_space && tempPointLeft !in board.misses) {
+            if (tempPointLeft in board && tempPointLeft !in board.hitsSpace && tempPointLeft !in board.misses) {
                 return tempPointLeft
             }
-            if (tempPointRight in board && tempPointRight !in board.hits_space && tempPointRight !in board.misses) {
+            if (tempPointRight in board && tempPointRight !in board.hitsSpace && tempPointRight !in board.misses) {
                 return tempPointRight
             }
         }

@@ -6,16 +6,16 @@ data class Board(
         val width: Int = 10,
         val height: Int = 10
 ) {
-    val ship_size_list: List<Int> = determineShipsToCreate()
-    val token_point: Point = Point(0, 0)
-    val token_direction: Direction = Direction.VERTICAL
-    val ships: List<Ship> = autoPlaceShips(ship_size_list)
-    val ship_space: Map<Point, Int> = getShipSpace(ships)
-    var hits_space = mutableSetOf<Point>()
+    private val shipSizeList: List<Int> = determineShipsToCreate()
+    private val tokenPoint: Point = Point(0, 0)
+    private val tokenDirection: Direction = Direction.VERTICAL
+    val ships: List<Ship> = autoPlaceShips(shipSizeList)
+    val shipSpace: Map<Point, Int> = getShipSpace(ships)
+    var hitsSpace = mutableSetOf<Point>()
     var misses = mutableSetOf<Point>()
-    var active_ships = ships.filter { !it.sunk }.map { it.id }
-    var sunk_ships = ships.filter { it.sunk }.map { it.id }
-    var game_over: Boolean = active_ships.isEmpty() && !ships.isEmpty()
+    private var activeShips = ships.filter { !it.sunk }.map { it.id }
+    var sunkShips = ships.filter { it.sunk }.map { it.id }
+    var gameOver: Boolean = activeShips.isEmpty() && !ships.isEmpty()
 
     operator fun contains(p: Point): Boolean {
         return p.isValid() && p.row < height && p.col < width
@@ -24,11 +24,11 @@ data class Board(
     fun printBoard() {
         for (i in 0 until height) {
             for (j in 0 until width) {
-                if (hits_space.contains(Point(i, j))) {
+                if (hitsSpace.contains(Point(i, j))) {
                     print(" X")
                 } else if (misses.contains(Point(i, j))) {
                     print(" o")
-                } else if (ship_space.contains(Point(i, j))) {
+                } else if (shipSpace.contains(Point(i, j))) {
                     print(" -")
                 } else {
                     print(" .")
@@ -44,10 +44,10 @@ data class Board(
         var ship_id = 1
         for (ship_size in ship_size_list) {
             var iter_ship =
-                    Ship(ship_id, ship_size, 1, token_point.randomPoint(width, height), token_direction.randomDirection())
+                    Ship(ship_id, ship_size, 1, tokenPoint.randomPoint(width, height), tokenDirection.randomDirection())
             while (!canShipBePlaced(iter_ship, ship_list)) {
                 iter_ship =
-                        Ship(ship_id, ship_size, 1, token_point.randomPoint(width, height), token_direction.randomDirection())
+                        Ship(ship_id, ship_size, 1, tokenPoint.randomPoint(width, height), tokenDirection.randomDirection())
             }
             ship_list.add(iter_ship)
             ship_id = ship_id + 1
@@ -95,7 +95,7 @@ data class Board(
         for (ship in ships) {
             hits_space_loop.addAll(ship.hits)
         }
-        hits_space = hits_space_loop
+        hitsSpace = hits_space_loop
     }
 
     fun refreshIndShipStates() {
@@ -105,12 +105,12 @@ data class Board(
     }
 
     fun refreshBoardShipState() {
-        sunk_ships = ships.filter { it.sunk }.map { it.id }
-        active_ships = ships.filter { !it.sunk }.map { it.id }
+        sunkShips = ships.filter { it.sunk }.map { it.id }
+        activeShips = ships.filter { !it.sunk }.map { it.id }
     }
 
     fun refreshGameOver() {
-        game_over = active_ships.isEmpty() && !ships.isEmpty()
+        gameOver = activeShips.isEmpty() && !ships.isEmpty()
     }
 
     fun refreshBoardState() {

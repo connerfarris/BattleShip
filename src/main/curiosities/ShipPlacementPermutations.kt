@@ -8,7 +8,7 @@ fun main() {
     var ship_space_set = mutableSetOf<Set<Point>>()
     for (x in 0..how_far) {
         var board = Board(1, 1, 5, 5)
-        ship_space_set.add(board.ship_space.keys)
+        ship_space_set.add(board.shipSpace.keys)
         println(x)
     }
     println("\nhow many orientations of 3 ships in 5x5? \n" + ship_space_set.size.toString())

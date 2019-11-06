@@ -17,7 +17,7 @@
 //    }
 //
 //    @org.junit.Test
-//    fun getShip_space() {
+//    fun getShipSpace() {
 //    }
 //
 //    @org.junit.Test
@@ -29,15 +29,15 @@
 //    }
 //
 //    @org.junit.Test
-//    fun getActive_ships() {
+//    fun getActiveShips() {
 //    }
 //
 //    @org.junit.Test
-//    fun getSunk_ships() {
+//    fun getSunkShips() {
 //    }
 //
 //    @org.junit.Test
-//    fun getGame_over() {
+//    fun getGameOver() {
 //    }
 //
 //    @org.junit.Test
@@ -81,15 +81,15 @@
 //    }
 //
 //    @org.junit.Test
-//    fun getShip_size_list() {
+//    fun getShipSizeList() {
 //    }
 //
 //    @org.junit.Test
-//    fun getToken_point() {
+//    fun getTokenPoint() {
 //    }
 //
 //    @org.junit.Test
-//    fun getToken_direction() {
+//    fun getTokenDirection() {
 //    }
 //
 //    @org.junit.Test

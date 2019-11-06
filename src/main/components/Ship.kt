@@ -8,7 +8,7 @@ data class Ship(
         val direction: Direction
 ) {
     val end: Point = start + direction * (size - 1)
-    val ship_points: Set<Point> = getShipPoints(start, end)
+//    val shipPoints = getShipPoints()
     var hits = mutableSetOf<Point>()
     var sunk: Boolean = false
 
@@ -29,7 +29,7 @@ data class Ship(
                 && vertical.start.col in horizontal.start.col..horizontal.end.col
     }
 
-    fun getShipPoints(start: Point, end: Point): Set<Point> {
+    fun getShipPoints(): Set<Point> {
         var ship_points_loop = mutableSetOf<Point>()
         ship_points_loop.add(start)
         ship_points_loop.add(end)

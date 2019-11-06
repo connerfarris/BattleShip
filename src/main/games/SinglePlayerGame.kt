@@ -13,7 +13,7 @@ data class SinglePlayerGame(
     private var logicEngine = setLogicEngine(logicEngineString)
 
     fun play() {
-        while (!board.game_over) {
+        while (!board.gameOver) {
             board.printBoard()
             logicEngine.move()
             moveNum++
@@ -22,7 +22,7 @@ data class SinglePlayerGame(
     }
 
     fun playVerbose() {
-        while (!board.game_over) {
+        while (!board.gameOver) {
             board.printBoard()
             logicEngine.moveVerbose()
             moveNum++
@@ -31,7 +31,7 @@ data class SinglePlayerGame(
     }
 
     fun playNoPrint() {
-        while (!board.game_over) {
+        while (!board.gameOver) {
             logicEngine.move()
             moveNum++
         }
