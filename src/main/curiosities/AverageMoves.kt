@@ -45,4 +45,4 @@ fun main() {
 //95.41097 random
 //66.61893 pickclose
 //61.64198 pickclosesmartly
-//55.21523 pickclosestopwhensunk
+//52.72122 pickclosestopwhensunk

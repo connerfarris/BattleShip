@@ -13,7 +13,7 @@ class PickCloseStopWhenSunk(
 
     override fun move() {
         var movePoint: Point
-        putPossibleShipPointsInHighestPriority()
+        refreshPriority()
         movePoint = pickRandomPointInOrderOfPriority()
         return processMove(movePoint)
     }
@@ -21,13 +21,12 @@ class PickCloseStopWhenSunk(
     override fun moveVerbose() {
         var movePoint: Point
         println("1: " + priorityPointMap[1]?.size + "  2: " + priorityPointMap[2]?.size + "  3: " + priorityPointMap[3]?.size + "  4: " + priorityPointMap[4]?.size)
-        putPossibleShipPointsInHighestPriority()
+        refreshPriority()
         movePoint = pickRandomPointInOrderOfPriorityVerbose()
         return processMove(movePoint)
     }
 
-    private fun putPossibleShipPointsInHighestPriority() {
-        var highestPriority = mutableSetOf<Point>()
+    private fun refreshPriority() {
         var highPriority = mutableSetOf<Point>()
         var sunkShipPoints = mutableSetOf<Point>()
         for (shipId in board.sunkShips) {
@@ -54,25 +53,25 @@ class PickCloseStopWhenSunk(
             }
         }
         priorityPointMap[2] = highPriority
-        if (anyInLineHitsInHighPriority(highPriority)) {
-            putInLineHitsOnActiveShipsInHighestPriority(highPriority)
+        if (hitsOnActiveShips.size > 1) {
+            putPointsInLineWithInLineHitsOnActiveShipsInHighestPriority(highPriority)
         }
     }
 
-    private fun putInLineHitsOnActiveShipsInHighestPriority(highPriority: MutableSet<Point>) {
+    private fun putPointsInLineWithInLineHitsOnActiveShipsInHighestPriority(highPriority: MutableSet<Point>) {
         var highestPriorityPoint = Point(-1, -1)
         var rowMap = mutableMapOf<Int, Int>()
         var colMap = mutableMapOf<Int, Int>()
-        for (point in highPriority) {
+        for (point in board.hitsSpace) {
             if (rowMap[point.row] == null) {
                 rowMap[point.row] = 1
             } else {
                 rowMap[point.row] = rowMap[point.row]!! + 1
             }
-            if (colMap[point.row] == null) {
-                colMap[point.row] = 1
+            if (colMap[point.col] == null) {
+                colMap[point.col] = 1
             } else {
-                colMap[point.row] = colMap[point.row]!! + 1
+                colMap[point.col] = colMap[point.col]!! + 1
             }
         }
         for ((key, value) in rowMap) {
@@ -87,6 +86,7 @@ class PickCloseStopWhenSunk(
         }
         if (highestPriorityPoint != Point(-1, -1)) {
             priorityPointMap[1] = mutableSetOf(highestPriorityPoint)
+            priorityPointMap[2]?.remove(highestPriorityPoint)
             return
         }
         for ((key, value) in colMap) {
@@ -101,6 +101,7 @@ class PickCloseStopWhenSunk(
         }
         if (highestPriorityPoint != Point(-1, -1)) {
             priorityPointMap[1] = mutableSetOf(highestPriorityPoint)
+            priorityPointMap[2]?.remove(highestPriorityPoint)
             return
         }
     }
