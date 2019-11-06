@@ -20,13 +20,14 @@ class PickCloseStopWhenSunk(
 
     override fun moveVerbose() {
         var movePoint: Point
-        println("1: " + priorityPointMap[1]?.size + "  2: " + priorityPointMap[2]?.size + "  3: " + priorityPointMap[3]?.size)
+        println("1: " + priorityPointMap[1]?.size + "  2: " + priorityPointMap[2]?.size + "  3: " + priorityPointMap[3]?.size + "  4: " + priorityPointMap[4]?.size)
         putPossibleShipPointsInHighestPriority()
         movePoint = pickRandomPointInOrderOfPriorityVerbose()
         return processMove(movePoint)
     }
 
     private fun putPossibleShipPointsInHighestPriority() {
+        var highestPriority = mutableSetOf<Point>()
         var highPriority = mutableSetOf<Point>()
         var sunkShipPoints = mutableSetOf<Point>()
         for (shipId in board.sunkShips) {
@@ -52,7 +53,72 @@ class PickCloseStopWhenSunk(
                 highPriority.add(tempPointRight)
             }
         }
-        priorityPointMap[1] = highPriority
+        priorityPointMap[2] = highPriority
+        if (anyInLineHitsInHighPriority(highPriority)) {
+            putInLineHitsOnActiveShipsInHighestPriority(highPriority)
+        }
+    }
+
+    private fun putInLineHitsOnActiveShipsInHighestPriority(highPriority: MutableSet<Point>) {
+        var highestPriorityPoint = Point(-1, -1)
+        var rowMap = mutableMapOf<Int, Int>()
+        var colMap = mutableMapOf<Int, Int>()
+        for (point in highPriority) {
+            if (rowMap[point.row] == null) {
+                rowMap[point.row] = 1
+            } else {
+                rowMap[point.row] = rowMap[point.row]!! + 1
+            }
+            if (colMap[point.row] == null) {
+                colMap[point.row] = 1
+            } else {
+                colMap[point.row] = colMap[point.row]!! + 1
+            }
+        }
+        for ((key, value) in rowMap) {
+            if (value > 1) {
+                for (point in highPriority) {
+                    if (point.row.equals(key)) {
+                        highestPriorityPoint = point
+                        break
+                    }
+                }
+            }
+        }
+        if (highestPriorityPoint != Point(-1, -1)) {
+            priorityPointMap[1] = mutableSetOf(highestPriorityPoint)
+            return
+        }
+        for ((key, value) in colMap) {
+            if (value > 1) {
+                for (point in highPriority) {
+                    if (point.col.equals(key)) {
+                        highestPriorityPoint = point
+                        break
+                    }
+                }
+            }
+        }
+        if (highestPriorityPoint != Point(-1, -1)) {
+            priorityPointMap[1] = mutableSetOf(highestPriorityPoint)
+            return
+        }
+    }
+
+    private fun anyInLineHitsInHighPriority(highPriority: MutableSet<Point>): Boolean {
+        if (highPriority.size <= 1) {
+            return false
+        }
+        var rowList = mutableSetOf<Int>()
+        var colList = mutableSetOf<Int>()
+        for (point in highPriority) {
+            rowList.add(point.row)
+            colList.add(point.col)
+        }
+        if (rowList.size < highPriority.size || colList.size < highPriority.size) {
+            return true
+        }
+        return false
     }
 
     private fun pickRandomPointInOrderOfPriority(): Point {
@@ -64,6 +130,7 @@ class PickCloseStopWhenSunk(
                 priorityPointMap[1]?.remove(movePoint)
                 priorityPointMap[2]?.remove(movePoint)
                 priorityPointMap[3]?.remove(movePoint)
+                priorityPointMap[4]?.remove(movePoint)
                 return movePoint
             }
         }
@@ -81,6 +148,7 @@ class PickCloseStopWhenSunk(
                 priorityPointMap[1]?.remove(movePoint)
                 priorityPointMap[2]?.remove(movePoint)
                 priorityPointMap[3]?.remove(movePoint)
+                priorityPointMap[4]?.remove(movePoint)
                 return movePoint
             }
         }
@@ -89,6 +157,7 @@ class PickCloseStopWhenSunk(
 
     private fun initPriorityPointMap(): SortedMap<Int, MutableSet<Point>> {
         var highest = mutableSetOf<Point>()
+        var high = mutableSetOf<Point>()
         var even = mutableSetOf<Point>()
         var odd = mutableSetOf<Point>()
         var priorityMap = mutableMapOf<Int, MutableSet<Point>>()
@@ -102,16 +171,10 @@ class PickCloseStopWhenSunk(
             }
         }
         priorityMap[1] = highest
-        priorityMap[2] = odd
-        priorityMap[3] = even
+        priorityMap[2] = high
+        priorityMap[3] = odd
+        priorityMap[4] = even
         return priorityMap.toSortedMap()
-    }
-
-    private fun areAllHitsAreOnSunkShips(): Boolean {
-        if (board.hitsSpace.size == getSizeOfSunkShips(board.sunkShips)) {
-            return true
-        }
-        return false
     }
 
     override fun processMove(movePoint: Point) {

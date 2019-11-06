@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46b610b5-8e87-4d58-98a2-510a7d586782" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/components/Board.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/components/Board.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/components/Ship.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/components/Ship.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/curiosities/AverageMoves.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/curiosities/AverageMoves.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/curiosities/ShipPlacementPermutations.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/curiosities/ShipPlacementPermutations.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/games/SinglePlayerGame.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/games/SinglePlayerGame.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/logic/PickClose.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/logic/PickClose.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/logic/PickCloseSmartly.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/logic/PickCloseSmartly.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/logic/PickCloseStopWhenSunk.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/logic/PickCloseStopWhenSunk.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/logic/PickRandom.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/logic/PickRandom.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/BoardTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/BoardTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/main/components/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/main/components/Board.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/main/components/Ship.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/main/components/Ship.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/main/curiosities/ShipPlacementPermutationsKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/main/curiosities/ShipPlacementPermutationsKt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/main/games/SinglePlayerGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/main/games/SinglePlayerGame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/main/logic/PickClose.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/main/logic/PickClose.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/main/logic/PickCloseSmartly.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/main/logic/PickCloseSmartly.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/main/logic/PickCloseStopWhenSunk.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/main/logic/PickCloseStopWhenSunk.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/main/logic/PickRandom.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/main/logic/PickRandom.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -94,8 +76,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/logic/PickCloseStopWhenSunk.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="65" column="54" selection-start-line="65" selection-start-column="54" selection-end-line="65" selection-end-column="54" />
+            <state relative-caret-position="1082">
+              <caret line="104" column="9" selection-start-line="104" selection-start-column="9" selection-end-line="104" selection-end-column="9" />
               <folding>
                 <element signature="e#20#122#0" expanded="true" />
               </folding>
@@ -124,8 +106,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/curiosities/AverageMoves.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="749">
-              <caret line="47" column="10" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
+            <state relative-caret-position="766">
+              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
             </state>
           </provider>
         </entry>
@@ -287,7 +269,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.main.curiosities.AverageMovesKt">
+  <component name="RunManager" selected="Kotlin.main.SinglePlayerGameMainKt">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="VM_PARAMETERS" value="-Dcom.sun.management.jmxremote" />
       <method v="2">
@@ -335,8 +317,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.main.curiosities.AverageMovesKt" />
         <item itemvalue="Kotlin.main.SinglePlayerGameMainKt" />
+        <item itemvalue="Kotlin.main.curiosities.AverageMovesKt" />
         <item itemvalue="Kotlin.main.curiosities.ShipPlacementPermutationsKt" />
       </list>
     </recent_temporary>
@@ -352,12 +334,12 @@
       <option name="presentableId" value="Default" />
       <updated>1572900815657</updated>
       <workItem from="1572900819078" duration="440000" />
-      <workItem from="1572901502826" duration="39809000" />
+      <workItem from="1572901502826" duration="44237000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40249000" />
+    <option name="totallyTimeSpent" value="44677000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -375,7 +357,7 @@
       <window_info anchor="bottom" id="Docker" order="2" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="4" />
-      <window_info anchor="bottom" id="Messages" order="5" visible="true" weight="0.3261105" />
+      <window_info anchor="bottom" id="Messages" order="5" weight="0.3253796" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.32936078" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
@@ -614,13 +596,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/curiosities/AverageMoves.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="749">
-          <caret line="47" column="10" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/logic/PickCloseSmartly.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -631,10 +606,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/curiosities/AverageMoves.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="766">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/logic/PickCloseStopWhenSunk.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="65" column="54" selection-start-line="65" selection-start-column="54" selection-end-line="65" selection-end-column="54" />
+        <state relative-caret-position="1082">
+          <caret line="104" column="9" selection-start-line="104" selection-start-column="9" selection-end-line="104" selection-end-column="9" />
           <folding>
             <element signature="e#20#122#0" expanded="true" />
           </folding>
